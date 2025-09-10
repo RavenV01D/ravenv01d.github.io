@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home - Raven Void Gaming</title>
-<link rel="stylesheet" href="style.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8718164446630075"
-     crossorigin="anonymous"></script>
-<script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Raven Void Gaming</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8718164446630075"
+    crossorigin="anonymous"></script>
+
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header>
-  <h1>Raven Void Gaming</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Blog</a>
-  </nav>
-</header>
-<main>
-  <section>
-    <h2>Welcome</h2>
-    <p>Hey! I’m Raven Void. Here you can find my current projects, blogs, and social links.
-    I am a small creator who just started up so it would be great if you could drop a follow on twitch and subscribe on youtube>.
-My Patreon is completly free, check out some of my projects there!</p>
-  </section>
-</main>
-<footer>
-  <p>Connect with me:</p>
-  <div class="socials">
-    <a href="https://www.twitch.tv/ravenvoidgaming" target="_blank">Twitch</a>
-    <a href="https://patreon.com/Raven_VoidGaming" target="_blank">Patreon</a>
-    <a href="https://www.youtube.com/@RavenVoidGaming" target="_blank">YouTube</a>
-  </div>
-  <p>&copy; 2025 Raven Void Gaming</p>
-</footer>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Raven Void Gaming</h1>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Welcome</h2>
+        <p>
+          Hey! I’m <strong>Raven Void</strong>. Here you can find my projects, blogs, and socials.  
+          I’m a small creator just starting up, so it’d mean a lot if you followed me on Twitch and subscribed on YouTube.  
+          My Patreon is completely free — check out some of my projects there!
+        </p>
+        <div class="cta-buttons">
+          <a href="https://www.twitch.tv/ravenvoidgaming" class="btn click-sound" target="_blank">
+            <i class="fab fa-twitch"></i> Follow on Twitch
+          </a>
+          <a href="https://www.youtube.com/@RavenVoidGaming" class="btn click-sound" target="_blank">
+            <i class="fab fa-youtube"></i> Subscribe on YouTube
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Connect with me:</p>
+      <div class="socials">
+        <a href="https://www.twitch.tv/ravenvoidgaming" class="click-sound" target="_blank"><i class="fab fa-twitch"></i></a>
+        <a href="https://patreon.com/Raven_VoidGaming" class="click-sound" target="_blank"><i class="fab fa-patreon"></i></a>
+        <a href="https://www.youtube.com/@RavenVoidGaming" class="click-sound" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>&copy; 2025 Raven Void Gaming</p>
+    </div>
+  </footer>
+
+  <!-- Sound Effect -->
+  <audio id="click-sound" src="bep.mp3" preload="auto"></audio>
 </body>
 </html>
