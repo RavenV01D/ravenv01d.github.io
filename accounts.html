@@ -1,26 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Account - Raven Void</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"> <!-- ✅ pulls styling -->
 </head>
 <body>
   <header>
     <h1>My Account</h1>
-    <a href="index.html">⬅ Back Home</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+    </nav>
   </header>
 
   <main>
     <div id="user-info" class="glass-card">
       <h2>Welcome</h2>
       <p id="user-details">Not signed in.</p>
-      <button id="loginBtn">Sign In with Google</button>
-      <button id="logoutBtn" style="display:none;">Logout</button>
+      <button id="loginBtn" class="btn">Sign In with Google</button>
+      <button id="logoutBtn" class="btn" style="display:none;">Logout</button>
     </div>
   </main>
 
+  <footer>
+    <p>&copy; 2025 Raven Void Gaming</p>
+  </footer>
+
   <script type="module" src="firebase-auth.js"></script>
 </body>
-</html>
