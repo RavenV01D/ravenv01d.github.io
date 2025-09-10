@@ -1,66 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Home - Raven Void Gaming</title>
+
+  <!-- styles -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Awesome for icons (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Google AdSense -->
+  <!-- Google AdSense - kept as you requested (do not modify the client id) -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8718164446630075"
-    crossorigin="anonymous"></script>
+     crossorigin="anonymous"></script>
 
+  <!-- behavior -->
   <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- HEADER -->
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo">Raven Void Gaming</h1>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="blog.html" class="nav-link">Blog</a>
-      </nav>
+    <div class="wrap">
+      <button id="menu-btn" class="menu-btn interactive" aria-expanded="false" aria-label="Open menu">
+        <span class="hamburger"><i class="fas fa-bars"></i></span>
+      </button>
+
+      <h1 class="logo">Raven V01D</h1>
+
+      <div class="header-right">
+        <!-- placeholder sign-in button (hook into Auth0 / Firebase / Auth provider later) -->
+        <button id="auth-btn" class="auth-btn interactive">Sign In</button>
+      </div>
     </div>
+
+    <!-- Animated dropdown menu -->
+    <nav id="main-menu" class="dropdown" aria-hidden="true">
+      <a href="index.html" class="nav-link interactive">Home</a>
+      <a href="projects.html" class="nav-link interactive">Projects</a>
+      <a href="blog.html" class="nav-link interactive">Blog</a>
+      <a href="accounts.html" class="nav-link interactive">Accounts</a>
+    </nav>
   </header>
 
+  <!-- TOP AD (example) — replace data-ad-slot with your own slot id -->
+  <div class="ad-top">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-8718164446630075"
+      data-ad-slot="1234567890"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <!-- MAIN -->
   <main>
-    <section class="hero">
-      <div class="container">
-        <h2>Welcome</h2>
+    <!-- ABOUT (translucent) -->
+    <section class="about panel translucent">
+      <div class="wrap">
+        <h2>About</h2>
         <p>
-          Hey! I’m <strong>Raven Void</strong>. Here you can find my projects, blogs, and socials.  
-          I’m a small creator just starting up, so it’d mean a lot if you followed me on Twitch and subscribed on YouTube.  
-          My Patreon is completely free — check out some of my projects there!
+          Hey! I’m <strong>Raven Void</strong>. Here you can find my projects, blogs, and socials.
+          I’m a small creator just starting up — it’d mean a lot if you followed me on Twitch and subscribed on YouTube.
+          My Patreon has free content; check out some of my projects there!
         </p>
-        <div class="cta-buttons">
-          <a href="https://www.twitch.tv/ravenvoidgaming" class="btn click-sound" target="_blank">
-            <i class="fab fa-twitch"></i> Follow on Twitch
-          </a>
-          <a href="https://www.youtube.com/@RavenVoidGaming" class="btn click-sound" target="_blank">
-            <i class="fab fa-youtube"></i> Subscribe on YouTube
-          </a>
-        </div>
+      </div>
+    </section>
+
+    <!-- CARDS GRID (projects + blog previews) -->
+    <section class="cards">
+      <div class="wrap card-grid">
+        <a class="card interactive" href="projects.html#project1" aria-label="Project Example 1">
+          <h3>Project Example 1</h3>
+          <p class="teaser">Short one-line teaser about this project.</p>
+        </a>
+
+        <a class="card interactive" href="projects.html#project2" aria-label="Project Example 2">
+          <h3>Project Example 2</h3>
+          <p class="teaser">Short description about the second project.</p>
+        </a>
+
+        <a class="card interactive" href="blog.html#post-latest" aria-label="Latest Blog Post">
+          <h3>Latest Blog</h3>
+          <p class="teaser">Quick teaser of your newest blog post — click to read more.</p>
+        </a>
+
+        <a class="card interactive" href="projects.html#project3" aria-label="Project Example 3">
+          <h3>Project Example 3</h3>
+          <p class="teaser">Another project teaser — highlight what makes it cool.</p>
+        </a>
+
+        <a class="card interactive" href="projects.html#project4" aria-label="Project Example 4">
+          <h3>Project Example 4</h3>
+          <p class="teaser">Small blurb about project 4.</p>
+        </a>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
-      <p>Connect with me:</p>
+    <div class="wrap footer-inner">
       <div class="socials">
-        <a href="https://www.twitch.tv/ravenvoidgaming" class="click-sound" target="_blank"><i class="fab fa-twitch"></i></a>
-        <a href="https://patreon.com/Raven_VoidGaming" class="click-sound" target="_blank"><i class="fab fa-patreon"></i></a>
-        <a href="https://www.youtube.com/@RavenVoidGaming" class="click-sound" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://patreon.com/Raven_VoidGaming" target="_blank" class="social-link interactive" aria-label="Patreon"><i class="fab fa-patreon"></i></a>
+        <a href="https://www.twitch.tv/ravenvoidgaming" target="_blank" class="social-link interactive" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+        <a href="https://www.youtube.com/@RavenVoidGaming" target="_blank" class="social-link interactive" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
       </div>
-      <p>&copy; 2025 Raven Void Gaming</p>
+      <div class="copyright">&copy; 2025 Raven Void Gaming</div>
     </div>
   </footer>
 
-  <!-- Sound Effect -->
+  <!-- click sound -->
   <audio id="click-sound" src="bep.mp3" preload="auto"></audio>
 </body>
 </html>
