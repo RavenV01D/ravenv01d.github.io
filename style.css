@@ -1,117 +1,187 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root{
+  --bg-1: #171718;
+  --bg-2: #222226;
+  --text: #e8f6ff;
+  --accent: #6db8ff;
+  --panel-blue: rgba(93,132,150,0.48); /* translucent blue behind text */
+  --panel-blue-opaque: rgba(93,132,150,0.95);
+  --glow-rgba: 109,184,255; /* used for rgba box-shadow */
 }
 
-/* Base Styles */
-body {
-  font-family: 'Inter', sans-serif;
-  background: #f9f9fb;
-  color: #333;
-  line-height: 1.6;
+/* Reset / basics */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg-1) 0%, var(--bg-2) 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
 }
 
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
+/* layout helpers */
+.wrap{
+  width:92%;
+  max-width:1100px;
+  margin:0 auto;
 }
 
-/* Header */
-.site-header {
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  padding: 1rem 0;
+/* header */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:40;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.15));
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(6px);
+}
+.site-header .wrap{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  padding:0.9rem 0;
+}
+.logo{
+  font-weight:700;
+  font-size:1.6rem;
+  letter-spacing:1px;
+  margin-left:0.5rem;
+}
+.header-right{margin-left:auto;}
+
+/* menu button (hamburger) */
+.menu-btn{
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  border:0;
+  background:rgba(109,184,255,0.12);
+  color:var(--accent);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.menu-btn:focus{outline:2px solid rgba(109,184,255,0.15)}
+
+/* dropdown animated nav */
+.dropdown{
+  display:flex;
+  flex-direction:column;
+  gap:0.15rem;
+  padding:0.6rem;
+  position:relative;
+  overflow:hidden;
+  transition: max-height 260ms cubic-bezier(.2,.9,.2,1), opacity 200ms;
+  max-height:0;
+  opacity:0;
+}
+.dropdown.open{
+  max-height:400px;
+  opacity:1;
+}
+.dropdown .nav-link{
+  padding:0.6rem 0.9rem;
+  border-radius:8px;
+  background:transparent;
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+/* ad container spacing */
+.ad-top{margin:0.8rem 0;padding:0 0.5rem}
+
+/* panels (translucent) */
+.panel{
+  margin:1.25rem 0;
+  padding:1.2rem;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.03);
+}
+.translucent{
+  background: var(--panel-blue);
+  backdrop-filter: blur(6px) saturate(120%);
+  color:var(--text);
+}
+.about h2{
+  margin-top:0;
+  margin-bottom:0.6rem;
+  font-size:1.55rem;
+  color:var(--accent);
 }
 
-.nav {
-  float: right;
+/* card grid */
+.cards{padding:1rem 0 3rem}
+.card-grid{
+  display:grid;
+  gap:1rem;
+  grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) );
+}
+.card{
+  padding:1.4rem;
+  border-radius:14px;
+  background: rgba(93,132,150,0.66); /* slightly more filled card */
+  min-height:120px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-decoration:none;
+  color:var(--text);
+  border:1px solid rgba(255,255,255,0.03);
+  opacity:0.90; /* non-hover translucent */
+  transition: transform 180ms cubic-bezier(.2,.9,.2,1), box-shadow 180ms, opacity 180ms;
+  will-change: transform, box-shadow, opacity;
 }
 
-.nav-link {
-  margin-left: 1.5rem;
+/* hover/interactive effects (shared) */
+.interactive:hover{
+  transform: scale(1.025);        /* ~2.5% */
+  opacity: 1;                     /* make hovered item opaque */
+  box-shadow: 0 10px 30px rgba(var(--glow-rgba),0.18); /* slight glow */
   text-decoration: none;
-  color: #444;
-  font-weight: 500;
-  transition: color 0.2s ease;
 }
 
-.nav-link:hover {
-  color: #0077ff;
+/* small card text */
+.card h3{margin:0 0 0.45rem 0;font-size:1.1rem}
+.card .teaser{margin:0;font-size:0.95rem;color:rgba(235,245,255,0.86)}
+
+/* footer */
+.site-footer{
+  border-top:1px solid rgba(255,255,255,0.03);
+  padding:1.2rem 0;
+  margin-top:2rem;
+  background: linear-gradient(0deg, rgba(0,0,0,0.06), transparent);
+}
+.footer-inner{display:flex;align-items:center;gap:1rem;justify-content:center;flex-direction:column}
+.socials{display:flex;gap:0.6rem;margin-bottom:0.6rem}
+.social-link{
+  width:44px;height:44px;border-radius:8px;display:inline-grid;place-items:center;
+  background: #ffffff; color:#111; text-decoration:none; font-size:1.05rem;
+  box-shadow:0 3px 10px rgba(0,0,0,0.35);
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 4rem 1rem;
+/* shake animation for click */
+@keyframes clickShake {
+  0% { transform: translateX(0) }
+  15% { transform: translateX(-6px) }
+  30% { transform: translateX(6px) }
+  45% { transform: translateX(-4px) }
+  60% { transform: translateX(4px) }
+  75% { transform: translateX(-2px) }
+  100% { transform: translateX(0) }
 }
+.shake { animation: clickShake 360ms linear; }
 
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
+/* accessibility / focus */
+.interactive:focus{outline:2px solid rgba(109,184,255,0.18); outline-offset:3px;}
 
-.hero p {
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  color: #555;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.btn {
-  background: #0077ff;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.2s ease;
-}
-
-.btn:hover {
-  background: #005fcc;
-}
-
-/* Footer */
-.site-footer {
-  background: #fff;
-  border-top: 1px solid #eee;
-  padding: 2rem 1rem;
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.socials a {
-  margin: 0 0.5rem;
-  text-decoration: none;
-  color: #0077ff;
-  font-weight: 500;
-}
-
-.socials a:hover {
-  text-decoration: underline;
-}
-/* Social Icons */
-.socials a {
-  margin: 0 0.5rem;
-  font-size: 1.5rem;
-  color: #0077ff;
-  transition: color 0.2s ease;
-}
-
-.socials a:hover {
-  color: #005fcc;
+/* responsive tweaks */
+@media (min-width:800px){
+  .dropdown{position:absolute; right:18px; top:72px; background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.28)); border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+  .site-header .wrap{padding:1rem 0}
+  .logo{font-size:2rem}
+  .card-grid{gap:1.15rem}
 }
