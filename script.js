@@ -68,35 +68,3 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  // Auth button placeholder
-  if (authBtn) {
-    authBtn.addEventListener('click', () => {
-      // Placeholder: integrate your 3rd-party auth here (Auth0 / Firebase / etc.)
-      // Example options:
-      // - Auth0 (recommended SPA flow): use the Auth0 SPA JS SDK and call loginWithRedirect()
-      // - Firebase Auth: call signInWithPopup() or redirect
-      //
-      // For now we'll redirect to /account.html (create this route later)
-      window.location.href = '/account.html';
-    });
-  }
-
-  // ---- Example commented snippet for Auth0 integration (do not run as-is) ----
-  /* 
-  // 1) Add the Auth0 SPA SDK in your HTML:
-  // <script src="https://cdn.auth0.com/js/auth0-spa-js/latest/auth0-spa-js.production.js"></script>
-  //
-  // 2) Then initialize and call login:
-  // (async () => {
-  //   const auth0 = await createAuth0Client({
-  //     domain: 'YOUR_AUTH0_DOMAIN',
-  //     client_id: 'YOUR_AUTH0_CLIENT_ID',
-  //     redirect_uri: window.location.origin
-  //   });
-  //
-  //   // Trigger login
-  //   auth0.loginWithRedirect();
-  // })();
-  */
-});
