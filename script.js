@@ -3,6 +3,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainMenu = document.getElementById("main-menu");
   const clickSound = document.getElementById("click-sound");
 
+// Show project section on card click
+document.querySelectorAll('.card-grid .card').forEach(card => {
+  card.addEventListener('click', ev => {
+    const href = card.getAttribute('href'); // e.g., projects.html#project1
+    if (href && href.includes('#')) {
+      ev.preventDefault();
+      const targetId = href.split('#')[1];
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        // Hide all other panels first
+        document.querySelectorAll('.card-panel').forEach(sec => sec.classList.remove('visible'));
+        // Show the clicked panel
+        targetSection.classList.add('visible');
+        // Smooth scroll to it
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  });
+});
+  
   // Play click sound safely
   function playClickSound() {
     if (!clickSound) return;
