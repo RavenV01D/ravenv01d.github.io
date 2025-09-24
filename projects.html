@@ -1,5 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects - Raven Void Gaming</title>
+
+  <!-- styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8718164446630075"
+     crossorigin="anonymous"></script>
+
+  <!-- behavior -->
+  <script src="script.js" defer></script>
+
+  <style>
+    /* Additional styles for stacked, wider project cards */
+    .projects-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+    .projects-cards .card {
+      padding: 1.8rem;
+      font-size: 1rem;
+      min-height: 140px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
   <!-- HEADER -->
   <header class="site-header">
     <div class="wrap">
@@ -7,37 +43,44 @@
         <span class="hamburger"><i class="fas fa-bars"></i></span>
       </button>
 
-      <h1 class="logo">Raven V01D</h1>
+      <div class="logo">
+        <img src="logo.png" alt="Raven Void logo" class="site-logo" />
+        <span class="sr-only">Raven V01D</span>
+      </div>
 
-      <div class="header-right">
-        <!-- placeholder sign-in button (hook into Auth0 / Firebase / Auth provider later) -->
-</div>
+      <div class="header-right"></div>
     </div>
 
-    <!-- Animated dropdown menu -->
     <nav id="main-menu" class="dropdown" aria-hidden="true">
       <a href="index.html" class="nav-link interactive">Home</a>
       <a href="projects.html" class="nav-link interactive">Projects</a>
       <a href="about.html" class="nav-link interactive">About</a>
+      <a href="blog.html" class="nav-link interactive">Blog</a>
     </nav>
   </header>
-<body>
-<header>
-  <h1>Projects</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Blog</a>
-  </nav>
-</header>
-<main>
-  <section>
-    <div class="card">
-      <h3>Project Title</h3>
-      <p>Project description goes here...</p>
-    </div>
-  </section>
-</main>
+
+  <!-- MAIN -->
+  <main class="wrap">
+    <h1>Projects</h1>
+    <section class="projects-cards">
+      <a class="card interactive" href="projects.html#project1" aria-label="Chill Craft Project">
+        <h3>Chill Craft</h3>
+        <p>My Minecraft server — Chill Craft. Explore and have fun!</p>
+      </a>
+
+      <a class="card interactive" href="projects.html#project2" aria-label="AI Smart Pen Project">
+        <h3>AI Smart Pen</h3>
+        <p>My AI-enabled portable smart device project in progress.</p>
+      </a>
+
+      <a class="card interactive" href="projects.html#project3" aria-label="Next Project">
+        <h3>Next Project</h3>
+        <p>EEG + myoelectric sensor tool to help post-paralysis patients recover with physiotherapy.</p>
+      </a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div class="socials">
@@ -49,5 +92,8 @@
       <div class="copyright">&copy; 2025 Raven Void Gaming</div>
     </div>
   </footer>
+
+  <!-- click sound -->
+  <audio id="click-sound" src="bep.mp3" preload="auto"></audio>
 </body>
 </html>
