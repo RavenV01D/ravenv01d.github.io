@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Home - Raven Void Gaming</title>
+  <title>About - Raven Void Gaming</title>
 
   <!-- styles -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Font Awesome for icons (CDN) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Google AdSense - kept as you requested (do not modify the client id) -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8718164446630075"
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8718164446630075"
      crossorigin="anonymous"></script>
 
   <!-- behavior -->
   <script src="script.js" defer></script>
 </head>
+<body>
   <!-- HEADER -->
   <header class="site-header">
     <div class="wrap">
@@ -25,40 +26,48 @@
         <span class="hamburger"><i class="fas fa-bars"></i></span>
       </button>
 
-      <h1 class="logo">Raven V01D</h1>
-</div>
+      <div class="logo">
+        <img src="logo.png" alt="Raven Void logo" class="site-logo" />
+        <span class="sr-only">Raven V01D</span>
+      </div>
+
+      <div class="header-right"></div>
     </div>
 
-    <!-- Animated dropdown menu -->
+    <!-- Dropdown menu -->
     <nav id="main-menu" class="dropdown" aria-hidden="true">
       <a href="index.html" class="nav-link interactive">Home</a>
       <a href="projects.html" class="nav-link interactive">Projects</a>
       <a href="about.html" class="nav-link interactive">About</a>
+      <a href="blog.html" class="nav-link interactive">Blog</a>
     </nav>
   </header>
-<body>
-<header>
-  <h1>Welcome to Raven Void Gaming</h1>
-</header>
-<main>
-  <section class="card">
-    <p>Hey everyone! 👋</p>
-    <p>Welcome to official Raven Void Gaming!  
-    This is the place where I’ll share my latest projects, game dev experiments, gaming adventures, and anything else that catches my interest.  
-    Whether you’re here for cool code snippets, project updates, or just to see what’s going on in the Raven Void universe — you’re in the right place.</p>
 
-    <p>In the coming weeks, expect posts about:</p>
-    <ul>
-      <li>My current game development projects 🎮</li>
-      <li>Behind-the-scenes looks at how I build stuff 🔧</li>
-      <li>Random thoughts, tips, and tricks 💡</li>
-    </ul>
+  <!-- MAIN -->
+  <main class="wrap">
+    <section class="card">
+      <h1>About Me</h1>
+      <p>Hey everyone! 👋</p>
+      <p>
+        Welcome to official <strong>Raven Void Gaming</strong>!  
+        This is the place where I share my latest projects, game dev experiments, gaming adventures, and anything else that catches my interest.  
+        Whether you’re here for cool code snippets, project updates, or just to see what’s going on in the Raven Void universe — you’re in the right place.
+      </p>
 
-    <p>Thanks for stopping by — grab a coffee (or an energy drink) and let’s have an epic journey.</p>
+      <p>In the coming weeks, expect posts about:</p>
+      <ul>
+        <li>My current game development projects 🎮</li>
+        <li>Behind-the-scenes looks at how I build stuff 🔧</li>
+        <li>Random thoughts, tips, and tricks 💡</li>
+      </ul>
 
-    <p>— Raven Void</p>
-  </section>
-</main>
+      <p>Thanks for stopping by — grab a coffee (or an energy drink) and let’s have an epic journey.</p>
+
+      <p>— Raven Void</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div class="socials">
@@ -70,5 +79,8 @@
       <div class="copyright">&copy; 2025 Raven Void Gaming</div>
     </div>
   </footer>
+
+  <!-- click sound -->
+  <audio id="click-sound" src="bep.mp3" preload="auto"></audio>
 </body>
 </html>
