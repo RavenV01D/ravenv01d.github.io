@@ -103,3 +103,22 @@ button:active { transform: scale(0.98); }
   .logo { font-size: 2rem; }
   .card-grid { gap: 1.2rem; }
 }
+/* Hide project detail sections by default */
+.card-panel {
+  display: none;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-radius: 14px;
+  background: rgba(93,22,198,0.3); /* matches your purple theme */
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+.card-panel.visible {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
