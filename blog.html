@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog - Raven Void Gaming</title>
+
+  <!-- styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8718164446630075"
+     crossorigin="anonymous"></script>
+
+  <!-- behavior -->
+  <script src="script.js" defer></script>
+
+  <style>
+    /* Optional: Add spacing for DropInBlog container */
+    #dib-posts {
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap">
+      <button id="menu-btn" class="menu-btn interactive" aria-expanded="false" aria-label="Open menu">
+        <span class="hamburger"><i class="fas fa-bars"></i></span>
+      </button>
+
+      <div class="logo">
+        <img src="logo.png" alt="Raven Void logo" class="site-logo" />
+        <span class="sr-only">Raven V01D</span>
+      </div>
+
+      <div class="header-right"></div>
+    </div>
+
+    <nav id="main-menu" class="dropdown" aria-hidden="true">
+      <a href="index.html" class="nav-link interactive">Home</a>
+      <a href="projects.html" class="nav-link interactive">Projects</a>
+      <a href="about.html" class="nav-link interactive">About</a>
+      <a href="blog.html" class="nav-link interactive">Blog</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="wrap">
+    <h1>Blog</h1>
+    <div id="dib-posts"></div>
+    <!-- DropInBlog script -->
+    <script async src="https://io.dropinblog.com/embedjs/f3980994-87c4-4ca9-b978-f3deb5c4fded.js"></script>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="socials">
+        <a href="https://patreon.com/Raven_VoidGaming" target="_blank" class="social-link interactive" aria-label="Patreon"><i class="fab fa-patreon"></i></a>
+        <a href="https://www.twitch.tv/ravenvoidgaming" target="_blank" class="social-link interactive" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+        <a href="https://www.youtube.com/@RavenVoidGaming" target="_blank" class="social-link interactive" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://discord.gg/UAJ4sWPz" target="_blank" class="social-link interactive" aria-label="Discord"><i class="fab fa-discord"></i></a>
+      </div>
+      <div class="copyright">&copy; 2025 Raven Void Gaming</div>
+    </div>
+  </footer>
+
+  <!-- click sound -->
+  <audio id="click-sound" src="bep.mp3" preload="auto"></audio>
+</body>
+</html>
