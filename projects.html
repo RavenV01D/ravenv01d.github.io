@@ -5,35 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projects - Raven Void Gaming</title>
 
-  <!-- styles -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8718164446630075"
-     crossorigin="anonymous"></script>
-
-  <!-- behavior -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="script.js" defer></script>
-
-  <style>
-    /* Additional styles for stacked, wider project cards */
-    .projects-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 1.6rem;
-      max-width: 800px;
-      margin: 2rem auto;
-    }
-    .projects-cards .card {
-      padding: 1.8rem;
-      font-size: 1rem;
-      min-height: 140px;
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
   <!-- HEADER -->
@@ -43,14 +17,10 @@
         <span class="hamburger"><i class="fas fa-bars"></i></span>
       </button>
 
-      <div class="logo">
-        <img src="logo.png" alt="Raven Void logo" class="site-logo" />
-        <span class="sr-only">Raven V01D</span>
-      </div>
-
-      <div class="header-right"></div>
+      <h1 class="logo">Raven V01D</h1>
     </div>
 
+    <!-- Animated dropdown menu -->
     <nav id="main-menu" class="dropdown" aria-hidden="true">
       <a href="index.html" class="nav-link interactive">Home</a>
       <a href="projects.html" class="nav-link interactive">Projects</a>
@@ -60,23 +30,40 @@
   </header>
 
   <!-- MAIN -->
-  <main class="wrap">
-    <h1>Projects</h1>
-    <section class="projects-cards">
-      <a class="card interactive" href="projects.html#project1" aria-label="Chill Craft Project">
-        <h3>Chill Craft</h3>
-        <p>My Minecraft server — Chill Craft. Explore and have fun!</p>
-      </a>
+  <main>
+    <section class="cards">
+      <div class="wrap card-grid">
+        <a class="card interactive" href="projects.html#project1" aria-label="Chill Craft project">
+          <h3>Chill Craft</h3>
+          <p class="teaser">My Minecraft Server (Chill Craft), check it out!</p>
+        </a>
 
-      <a class="card interactive" href="projects.html#project2" aria-label="AI Smart Pen Project">
-        <h3>AI Smart Pen</h3>
-        <p>My AI-enabled portable smart device project in progress.</p>
-      </a>
+        <a class="card interactive" href="projects.html#project2" aria-label="AI Smart Pen project">
+          <h3>AI Smart Pen</h3>
+          <p class="teaser">My current work on an AI-enabled portable smart device.</p>
+        </a>
 
-      <a class="card interactive" href="projects.html#project3" aria-label="Next Project">
-        <h3>Next Project</h3>
-        <p>EEG + myoelectric sensor tool to help post-paralysis patients recover with physiotherapy.</p>
-      </a>
+        <a class="card interactive" href="projects.html#project3" aria-label="Next Project">
+          <h3>Next Project</h3>
+          <p class="teaser">EEG + Mayo electric sensors to aid post-paralysis recovery with physiotherapy.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Project Details Sections (anchors for links) -->
+    <section id="project1" class="card panel">
+      <h2>Chill Craft</h2>
+      <p>Chill Craft is my custom Minecraft server designed for creativity, collaboration, and fun. Players can join, explore, and interact with the world I’ve been building. Stay tuned for updates!</p>
+    </section>
+
+    <section id="project2" class="card panel">
+      <h2>AI Smart Pen</h2>
+      <p>The AI Smart Pen is a portable, AI-enabled device I’m developing. It helps with creative workflows and experimental applications, combining hardware and software innovation. Updates and demos will be shared here.</p>
+    </section>
+
+    <section id="project3" class="card panel">
+      <h2>Next Project</h2>
+      <p>This project combines EEG sensors with Mayo electric sensors to assist post-paralysis patients in physiotherapy recovery. I’ll document progress and experiments as the project evolves.</p>
     </section>
   </main>
 
@@ -93,7 +80,6 @@
     </div>
   </footer>
 
-  <!-- click sound -->
   <audio id="click-sound" src="bep.mp3" preload="auto"></audio>
 </body>
 </html>
