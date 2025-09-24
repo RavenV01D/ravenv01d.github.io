@@ -9,10 +9,10 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- Font Awesome for icons (CDN) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Google AdSense - kept as you requested (do not modify the client id) -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8718164446630075"
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8718164446630075"
      crossorigin="anonymous"></script>
 
   <!-- behavior -->
@@ -26,11 +26,12 @@
         <span class="hamburger"><i class="fas fa-bars"></i></span>
       </button>
 
-      <h1 class="logo">Raven V01D</h1>
+      <div class="logo">
+        <img src="logo.png" alt="Raven Void logo" class="site-logo" />
+        <span class="sr-only">Raven V01D</span>
+      </div>
 
-      <div class="header-right">
-        <!-- placeholder sign-in button (hook into Auth0 / Firebase / Auth provider later) -->
-</div>
+      <div class="header-right"></div>
     </div>
 
     <!-- Animated dropdown menu -->
@@ -38,12 +39,13 @@
       <a href="index.html" class="nav-link interactive">Home</a>
       <a href="projects.html" class="nav-link interactive">Projects</a>
       <a href="about.html" class="nav-link interactive">About</a>
+      <a href="blog.html" class="nav-link interactive">Blog</a>
     </nav>
   </header>
 
   <!-- MAIN -->
   <main>
-    <!-- ABOUT (translucent) -->
+    <!-- ABOUT (translucent panel) -->
     <section class="about panel translucent">
       <div class="wrap">
         <h2>Description</h2>
@@ -55,7 +57,7 @@
       </div>
     </section>
 
-    <!-- CARDS GRID (projects + blog previews) -->
+    <!-- CARDS GRID -->
     <section class="cards">
       <div class="wrap card-grid">
         <a class="card interactive" href="projects.html#project1" aria-label="Completed project">
@@ -64,13 +66,13 @@
         </a>
 
         <a class="card interactive" href="projects.html#project2" aria-label="Current project">
-          <h3>AI smart pen</h3>
-          <p class="teaser">My current works on a AI enabled portable smart device.</p>
+          <h3>AI Smart Pen</h3>
+          <p class="teaser">My current works on an AI-enabled portable smart device.</p>
         </a>
 
         <a class="card interactive" href="projects.html#project3" aria-label="Upcoming project">
           <h3>Next Project</h3>
-          <p class="teaser">A EEG and mayo electric sensors bundeled together to make a tool for helping post parslysis patients recover (witht he help of physiotherapy).</p>
+          <p class="teaser">A EEG + myoelectric sensor bundle to help post-paralysis patients recover with physiotherapy.</p>
         </a>
       </div>
     </section>
